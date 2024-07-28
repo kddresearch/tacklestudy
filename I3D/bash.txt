@@ -1,0 +1,7 @@
+python tools/train.py configs/recognition/i3d/i3d_r50_32x2x1_100e_goodbad.py     --work-dir work_dirs/goodbad_rgb2     --validate --seed 0 --deterministic
+
+python tools/test.py configs/recognition/i3d/i3d_r50_32x2x1_100e_goodbad.py     work_dirs/goodbad_rgb/latest.pth --eval top_k_accuracy mean_class_accuracy     --out result.json --average-clips prob
+
+https://github.com/open-mmlab/mmaction2/blob/master/configs/recognition/i3d/README.md install pre checkpoint
+https://github.com/open-mmlab/mmaction2
+delete 599
